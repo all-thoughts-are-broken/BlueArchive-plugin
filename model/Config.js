@@ -20,31 +20,7 @@ class ConfigSet {
 		/** 监听文件 */
 		this.watcher = { config: {}, defSet: {} }
 		/** 只获取默认配置的名单 */
-		this.ignore = ['help.set']
-	}
-
-	/**
-	 * package.json
-	 * @returns {import('../package.json')}
-	 */
-	get package() {
-		if (this._package) return this._package
-
-		this._package = JSON.parse(
-			fs.readFileSync(this.baseDir + '/package.json', 'utf8')
-		)
-		return this._package
-	}
-
-	/** package.json */
-	set package(data) {
-		this._package = lodash.assign(this.package, data)
-		fs.writeFileSync(
-			this.baseDir + '/package.json',
-			JSON.stringify(this._package, null, 2),
-			'utf8'
-		)
-		return this._package
+		this.ignore = ['help.menu']
 	}
 
 	/**
@@ -116,7 +92,7 @@ class ConfigSet {
 		const watcher = chokidar.watch(file)
 		watcher.on('change', () => {
 			delete this[type][key]
-			logger.mark(`[修改配置文件][${type}][${app}][${name}]`)
+			logger.mark(`[BlueArchive-plugin]：修改配置文件 [${type}][${app}][${name}]`)
 			if (type === 'defSet') this.assign(app, name)
 		})
 
@@ -192,7 +168,7 @@ class ConfigSet {
 		const key = `${app}.${name}`
 		const file = this.getFilePath(app, name, type)
 		if (!data) {
-			logger.mark(`[重置配置文件][${type}][${app}][${name}]`)
+			logger.mark(`[BlueArchive-plugin]：重置配置文件 [${type}][${app}][${name}]`)
 			fs.existsSync(file) && fs.unlinkSync(file)
 		} else if (lodash.isPlainObject(data)) {
 			if (!this[type][key]) this.getYaml(app, name, type)

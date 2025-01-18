@@ -1,0 +1,22 @@
+- group: 业务区
+  list:
+    - title: "#指令"
+      desc: 功能
+    - title: "#指令"
+      desc: 功能
+    - title: "#指令"
+      desc: 功能
+    - title: "#指令"
+      desc: 功能
+    - title: "#指令"
+      desc: 功能
+- group: 管理区
+  list:
+    - title: "#BA插件更新"
+      desc: "更新"
+    - title: "#BA插件更新"
+      desc: "更新"
+    - title: "#BA插件更新"
+      desc: "更新"
+    - title: "#BA插件更新"
+      desc: "更新"

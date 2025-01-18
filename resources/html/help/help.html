@@ -1,0 +1,43 @@
+<!-- 帮助的html和css都是ai写的，问就是我不会html和css -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{pluResPath}}html/help/help.css">
+	<link rel="preload" href="{{pluResPath}}image/help/logo.png" as="image" />
+	<link rel="preload" href="{{pluResPath}}image/help/background/113429080_p0.png" as="image" />
+	<title>BlueArchive-plugin帮助</title>
+	<style>
+		#container {
+			background-image: url("{{bg}}");
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="outer-container" {{@sys.scale}}>
+	<div class="container" id="container">
+		<h1>BlueArchive-plugin</h1>
+		<img class="centered-image"
+			 src="{{pluResPath}}image/help/logo.png"
+			 alt="logo">
+		{{each helpData val}}
+		<h2>{{val.group}}</h2>
+		<div class="feature-list">
+			{{each val.list item}}
+			<div class="setting">
+				<span class="setting-title">{{@item.title}}</span>
+				<span>{{item.desc}}</span>
+			</div>
+			{{/each}}
+		</div>
+		{{/each}}
+		<div class="footer">{{@copyright}}</div>
+	</div>
+</div>
+</body>
+
+</html>

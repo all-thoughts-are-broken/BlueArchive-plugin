@@ -1,0 +1,6 @@
+# 使用默认帮助背景图
+# 如果想使用自定义背景图，就把true改成false，然后把你的图放在 插件根目录/resources/customize_image/help_background/ 里
+# 图片名字随便（默认随机，如果想要固定哪一张你就放一张图呗）
+useCustomBackgroundImage: true
+# 使用默认随机背景图
+useRandomBackgroundImage: true

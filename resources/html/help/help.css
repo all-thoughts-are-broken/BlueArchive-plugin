@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f0e3;
+    color: #333;
+    transform-origin: 0 0;
+}
+
+/* 新增外部容器 */
+.outer-container {
+    transform-origin: top left;
+    /* 确保原点在左上角 */
+    overflow: hidden;
+    /* 隐藏外部溢出的部分 */
+    width: 100%;
+    /* 内容宽度 */
+    height: auto;
+    /* 高度自动计算内容 */
+    padding: 20px;
+    /* 对齐内容 */
+}
+
+.container {
+    width: 90%;
+    /* 90% 的宽度 */
+    max-width: 740px;
+    /* 最大宽度 */
+    margin: 0 auto;
+    /* 中心对齐 */
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-size: 100%;
+}
+
+.container>* {
+    position: relative;
+    z-index: 1;
+}
+
+.container>h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #b08968;
+}
+
+.container>.centered-image {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 10px auto 0;
+}
+
+.container>h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    color: #e29578;
+}
+
+.feature-list,
+.settings-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.feature,
+.setting {
+    background-color: rgb(48 146 196 / 20%);
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.setting .setting-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 0.8em;
+    color: #777;
+}
+
+.footer .version {
+    height: 40px;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    text-shadow: 3px 3px 4px #666;
+}
+
+.footer .V {
+    color: #0065d8;
+    font-weight: 1000;
+}
