@@ -7,7 +7,9 @@ import { execSync } from './runCmd.js'
  */
 export async function getRemoteUrl() {
 	try {
-		let { stdout, stderr } = await execSync('git remote -v')
+		let { stdout, stderr } = await execSync(
+			'cd ./plugins/BlueArchive-plugin && git remote -v'
+		)
 		if (stderr) {
 			logger.error(stderr)
 			return null
