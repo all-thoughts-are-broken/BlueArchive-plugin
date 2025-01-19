@@ -1,3 +1,4 @@
+import plugin from "../../../lib/plugins/plugin.js"
 import Help from '../model/help.js'
 
 export class BaHelp extends plugin {

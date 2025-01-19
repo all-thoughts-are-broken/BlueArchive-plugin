@@ -24,6 +24,7 @@ export default class Help extends base {
 					'resources/customize_image/help_background'
 				)
 			)
+			// 过滤一下那个文件
 			imageList = _.remove(imageList, (s) => s.endsWith('.gitignore'))
 			let i = tools.random(0, imageList.length - 1)
 			logger.info(imageList, imageList.length, i)

@@ -1,13 +1,13 @@
 - group: 业务区
   list:
-    - title: "#指令"
-      desc: 功能
-    - title: "#指令"
-      desc: 功能
-    - title: "#指令"
-      desc: 功能
-    - title: "#指令"
-      desc: 功能
+    - title: "#ba帮助"
+      desc: 就是查看本图啦
+    - title: "#ba攻略 黑子"
+      desc: 查看黑子的攻略图
+    - title: "#ba攻略 1-1"
+      desc: 查看1-1的攻略图
+    - title: "#ba攻略 H1-1"
+      desc: 查看1-1的hard攻略图
     - title: "#指令"
       desc: 功能
 - group: 管理区

@@ -1,5 +1,8 @@
 import puppeteer from '../lib/puppeteer/render.js'
 
+/**
+ * @param e
+ */
 export default class base {
 	constructor(e = {}) {
 		this.e = e
